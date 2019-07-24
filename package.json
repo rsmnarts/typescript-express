@@ -1,0 +1,33 @@
+{
+  "name": "ts-express",
+  "version": "1.0.0",
+  "description": "learn typescript",
+  "main": "app.js",
+  "author": "@rsmnarts",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "ts-node ./src/server.ts",
+    "devs": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/server.ts"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "class-transformer": "^0.2.3",
+    "class-validator": "^0.9.1",
+    "cookie-parser": "^1.4.4",
+    "envalid": "^5.0.0",
+    "express": "^4.17.1",
+    "helmet": "^3.19.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.6",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/cookie-parser": "^1.4.1",
+    "@types/jsonwebtoken": "^8.3.2",
+    "@types/node": "^12.6.8"
+  }
+}
