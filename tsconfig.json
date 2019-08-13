@@ -1,15 +1,14 @@
 {
   "compilerOptions": {
+    "moduleResolution": "node", // TODO: Cari solusi lain ts(2307)
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "pretty": true,
     "sourceMap": true,
     "target": "es2017",
     "outDir": "./dist",
     "baseUrl": "./src"
   },
-  "include": [
-    "src/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }

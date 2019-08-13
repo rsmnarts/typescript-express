@@ -3,7 +3,7 @@ export default interface User {
   name: string;
   email: string;
   password: string;
-  address: {
+  address?: {
     street: string;
     city: string;
   };

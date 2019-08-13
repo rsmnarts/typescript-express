@@ -1,6 +1,8 @@
 import 'dotenv/config';
+import 'reflect-metadata';
 import { createConnection } from 'typeorm';
 import App from './app';
+import config from './ormconfig';
 import AuthenticationControllers from './authentication/authentication.controller';
 import UserControllers from './users/user.controller';
 import PostControllers from './posts/post.controller';
@@ -11,7 +13,7 @@ validateEnv();
 
 (async () => {
   try {
-    await createConnection;
+    await createConnection(config);
   } catch (e) {
     console.log('Error while connecting to the database', e);
     return e;
