@@ -12,7 +12,7 @@ export default class App {
   public app: express.Application;
   public port: number;
 
-  constructor(controllers: Controller[], port) {
+  constructor(controllers: Controller[], port: any) {
     this.app = express();
     this.port = port;
 
@@ -42,8 +42,8 @@ export default class App {
   }
 
   private connectToDatabase() {
-    const { MONGO_USER, MONGO_PASS, MONGO_PATH } = process.env;
-    mongoose.connect(`mongodb://${MONGO_USER}:${MONGO_PASS}/${MONGO_PATH}`, {
+    const { MONGO_HOST, MONGO_PORT, MONGO_PATH } = process.env;
+    mongoose.connect(`mongodb://${MONGO_HOST}:${MONGO_PORT}/${MONGO_PATH}`, {
       useNewUrlParser: true
     });
   }
